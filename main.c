@@ -2,6 +2,9 @@
 #include "pico/stdlib.h"
 #include <stdbool.h>
 #include <diagnostic_controller.h>
+#include <LED_controller.h>
+
+#define NUM_PIXELS 22
 
 int main()
 {
@@ -10,10 +13,10 @@ int main()
     }
     printf("Stdio initialized.\n");
     initialize_adc_onboard_temp();
+    init_LED();
     while(true){
-        float temp = read_onboard_temp('C');
-        printf("Temperature = %0.2f°C\n", temp);
-        sleep_ms(1000);
+        cont_light(NUM_PIXELS);
+        sleep_ms(10);
     }
     
 }

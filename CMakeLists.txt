@@ -40,6 +40,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 target_link_libraries(${PROJECT_NAME}
     pico_stdlib
     diagnostic_controller
+    LED_controller
 )
 
 pico_enable_stdio_usb(${PROJECT_NAME} 1)
