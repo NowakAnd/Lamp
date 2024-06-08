@@ -4,7 +4,7 @@
 #include <diagnostic_controller.h>
 #include <LED_controller.h>
 
-#define NUM_PIXELS 22
+#define NUM_PIXELS 29
 
 int main()
 {
@@ -14,9 +14,10 @@ int main()
     printf("Stdio initialized.\n");
     initialize_adc_onboard_temp();
     init_LED();
-    while(true){
-        cont_light(NUM_PIXELS);
-        sleep_ms(10);
-    }
+    // while(true){
+    //     cont_light(NUM_PIXELS);
+    //     sleep_ms(10);
+    // }
+    const_light(NUM_PIXELS);
     
 }
