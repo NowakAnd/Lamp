@@ -9,6 +9,6 @@ void init_LED();
 /*!
 * \brief Constant lightning
 */
-void cont_light();
+void const_light();
 
 #endif
